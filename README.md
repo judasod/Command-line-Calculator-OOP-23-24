@@ -3,4 +3,4 @@ C0mmandline Calculat0r
 
 
 
-  Command-Line calculaor.
+  Command-Line calculator.
