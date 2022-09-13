@@ -25,27 +25,30 @@ void main()
 	EqParser d;
 	//d.parse();
 
-	// Testare constructori de copiere pentru campurile alocate dinamic
+	// Testare constructor de copiere pentru campuri alocate dinamic
 
-	//Clasa EqParsor
+	// Clasa eqparsor
 	EqParser c = a;
 	cout << strcmp(c.get_ecuatie(), a.get_ecuatie());
 	cout << strcmp(c.get_paranteze(), a.get_paranteze());
 	cout << endl;
 
 
-	//Clasa Numar
+	// Clasa numar
 	Numar n(2, 3, 4);
 	
-	float arr[5] = { 1999992, 2200020, 11724, 233234, 9999999 };
+	float arr[5] = { 199992, 2200020, 11724, 2332401, 9999999 };
 	float* aa = arr;
 	n.setLogEroare(aa, 5);
 
+	
+	int i;
 	float* t = n.getLogEroare();
-	for (int i = 0; i < n.getNrErori(); i++)
-		printf("%.3f  ", t[i]);		//cout << t[i]<<" ";
-
+	for (i = 0; i < n.getNrErori(); i++)
+		printf("%.30f  ", t[i]);		//cout << t[i]<<" ";
 	cout << endl;
+	
+	
 	Numar m = n;
 	Numar z;
 	z = m;
@@ -57,8 +60,9 @@ void main()
 	m.resetErori();
 	if(m.getOk() == true) cout <<"OK"<< endl;
 
-	//operatori  <<
+	// operator<<
 	// cout << z;
 	// cout << b;
 
 }
+
