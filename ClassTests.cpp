@@ -2,7 +2,6 @@
 #include <string>
 #include "EqParser.h"
 #include "Numar.h"
-
 using namespace std;
 
 
@@ -12,6 +11,7 @@ void main()
 	char e[] = "10+2-7+4*4/2";
 	char e2[] = "[( 9+10)^2 + 1] + 112";
 
+	
 	EqParser b = EqParser(e, 0, 0);
 	b.set_ecuatie(nullptr);
 	cout << b.get_ecuatie() << endl;
@@ -21,31 +21,30 @@ void main()
 	//a.set_ecuatie(0);
 	a.parse();
 
+
 	// Testare caz NULL
 	EqParser d;
 	//d.parse();
-
 	// Testare constructor de copiere pentru campuri alocate dinamic
-
 	// Clasa eqparsor
 	EqParser c = a;
 	cout << strcmp(c.get_ecuatie(), a.get_ecuatie());
 	cout << strcmp(c.get_paranteze(), a.get_paranteze());
-	cout << endl;
+	cout << endl<<endl;
 
 
 	// Clasa numar
-	Numar n(2, 3, 4);
+	Numar n(12, 3, 14);
 	
 	float arr[5] = { 199992, 2200020, 11724, 2332401, 9999999 };
 	float* aa = arr;
 	n.setLogEroare(aa, 5);
-
 	
 	int i;
 	float* t = n.getLogEroare();
 	for (i = 0; i < n.getNrErori(); i++)
-		printf("%.30f  ", t[i]);		//cout << t[i]<<" ";
+		printf("%.30f  ", t[i]);		
+	//cout << t[i]<<" ";
 	cout << endl;
 	
 	
@@ -57,12 +56,12 @@ void main()
 		if(test[i] == t[i])
 			cout<<"1 ";
 	
+	
 	m.resetErori();
-	if(m.getOk() == true) cout <<"OK"<< endl;
+	if(m.getOK() == true)	cout <<"OK"<< endl;
 
 	// operator<<
 	// cout << z;
 	// cout << b;
-
 }
 
