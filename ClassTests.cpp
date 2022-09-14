@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "EqParser.h"
 #include "Numar.h"
+#include "EqParser.h"
 using namespace std;
 
 
